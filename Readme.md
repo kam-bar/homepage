@@ -16,3 +16,7 @@ The homepage project was designed to introduce the basics of HTML, CSS, and Java
 - HTML5
 - CSS3 (Flexbox, gradients)
 - JavaScript (ES6)
+
+## Demo
+
+https://kam-bar.github.io/homepage/
