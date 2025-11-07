@@ -20,3 +20,6 @@ The homepage project was designed to introduce the basics of HTML, CSS, and Java
 ## Demo
 
 https://kam-bar.github.io/homepage/
+
+
+![homepage](https://i.postimg.cc/MHPhDzyw/readme.png)
