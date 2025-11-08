@@ -1,21 +1,27 @@
-console.log("Witaj!");
+{
+    const toggleTable = (tableWrapper) => {
+        tableWrapper.classList.toggle("table__wrapper--hidden");
+    };
 
-const button = document.querySelector(".table__button");
-const tableWrapper = document.querySelector(".table__wrapper--hidden");
+    const updateButtonText = (button, tableWrapper) => {
+        button.innerText = tableWrapper.classList.contains("table__wrapper--hidden") 
+            ? "Pokaż listę książek" 
+            : "Ukryj listę książek";
+    };
 
-const toggleTable = () => {
-    tableWrapper.classList.toggle("table__wrapper--hidden");
-};
+    const onButtonClick = (button, tableWrapper) => {
+        toggleTable(tableWrapper);
+        updateButtonText(button, tableWrapper);
+    };
 
-const updateButtonText = () => {
-    button.innerText = tableWrapper.classList.contains("table__wrapper--hidden") 
-        ? "Pokaż listę książek" 
-        : "Ukryj listę książek";
-};
+    const init = () => {
+        const button = document.querySelector(".table__button");
+        const tableWrapper = document.querySelector(".table__wrapper--hidden");
 
-const onButtonClick = () => {
-    toggleTable();
-    updateButtonText();
-};
+        button.addEventListener("click", () => {
+            onButtonClick(button, tableWrapper);
+        });
+    };
 
-button.addEventListener("click", onButtonClick);
+    init();
+}
